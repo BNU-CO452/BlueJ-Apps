@@ -12,6 +12,7 @@ public class LabClass
     private String instructor;
     private String room;
     private String timeAndDay;
+    
     private ArrayList<Student> students;
     private int capacity;
     
@@ -24,6 +25,7 @@ public class LabClass
         instructor = "unknown";
         room = "unknown";
         timeAndDay = "unknown";
+        
         students = new ArrayList<Student>();
         capacity = maxNumberOfStudents;
     }
@@ -33,10 +35,12 @@ public class LabClass
      */
     public void enrollStudent(Student newStudent)
     {
-        if(students.size() == capacity) {
+        if(students.size() == capacity) 
+        {
             System.out.println("The class is full, you cannot enrol.");
         }
-        else {
+        else 
+        {
             students.add(newStudent);
         }
     }
@@ -83,9 +87,12 @@ public class LabClass
         System.out.println("Lab class " + timeAndDay);
         System.out.println("Instructor: " + instructor + "   Room: " + room);
         System.out.println("Class list:");
-        for(Student student : students) {
+        
+        for(Student student : students) 
+        {
             student.print();
         }
+        
         System.out.println("Number of students: " + numberOfStudents());
     }
 }
