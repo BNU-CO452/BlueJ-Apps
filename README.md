@@ -13,9 +13,9 @@ Create or locate a suitable folder to store all your local repositories. Dont us
 ## Step 4
 Use GitHub Desktop to clone your remote repository to create a local copy in your repositories folder.
 
-[Clone](https://github.com/BNU-CO452/BlueJ-Apps/blob/master/images/GitHub%20Desktop-2.jpg)
+![Clone](https://github.com/BNU-CO452/BlueJ-Apps/blob/master/images/GitHub%20Desktop-2.jpg)
 
-[Clone 2](https://github.com/BNU-CO452/BlueJ-Apps/blob/master/images/GitHub%20Desktop-3.jpg)
+![Clone 2](https://github.com/BNU-CO452/BlueJ-Apps/blob/master/images/GitHub%20Desktop-3.jpg)
 ## Step 5
 Start coding the applications on your local copy and commit and push up your changes bit by bit adding a suitable message with each commit so your tutor can see how you developed the application in detail.
 
