@@ -6,6 +6,7 @@ The requirements for those applications and full details of how they will be ass
 Click on the **Use this Template** button and create your own copy of this repository
 ## Step 2
 Install [GitHub Desktop](https://desktop.github.com/) on your computer
+![GitHub Desktop](https://github.com/BNU-CO452/BlueJ-Apps/blob/master/images/GitHub%20Desktop-1.jpg)
 ## Step 3
 Create or locate a suitable folder to store all your local repositories. Dont use a cloud drive like OneDrive.  A folder on a memory stick or a data drive is best.
 ## Step 4
