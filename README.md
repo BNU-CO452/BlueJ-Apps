@@ -17,5 +17,9 @@ Use GitHub Desktop to clone your remote repository to create a local copy in you
 
 ![Clone 2](https://github.com/BNU-CO452/BlueJ-Apps/blob/master/images/GitHub%20Desktop-3.jpg)
 ## Step 5
-Start coding the applications on your local copy and commit and push up your changes bit by bit adding a suitable message with each commit so your tutor can see how you developed the application in detail.
+Start coding the applications on your local copy by opening a BlueJ project in BlueJ.  Make changes and commit and push up your changes bit by bit adding a suitable message with each commit so your tutor can see how you developed the application in detail.
+
+You should have one main folder inside of which is all the blueJ project folders.  You will find that there are changes to the package.bluej which you did not make but which the system makes as you make other changes.  Just commit and push them like other changes.  Folder names in Java should start with a lower case letter, I have made one mistake there.
+
+
 
