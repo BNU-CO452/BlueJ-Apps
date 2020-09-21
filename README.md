@@ -21,5 +21,7 @@ Start coding the applications on your local copy by opening a BlueJ project in B
 
 You should have one main folder inside of which is all the blueJ project folders.  You will find that there are changes to the package.bluej which you did not make but which the system makes as you make other changes.  Just commit and push them like other changes.  Folder names in Java should start with a lower case letter, I have made one mistake there.
 
+![Folder Structure](https://github.com/BNU-CO452/BlueJ-Apps/blob/master/images/Folders.jpg)
+
 
 
