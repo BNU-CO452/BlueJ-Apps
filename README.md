@@ -13,7 +13,7 @@ Install [GitHub Desktop](https://desktop.github.com/) on your computer
 
 ![GitHub Desktop](https://github.com/BNU-CO452/BlueJ-Apps/blob/master/images/GitHub%20Desktop-1.jpg)
 ## Step 3
-Create or locate a suitable folder to store all your local repositories. Dont use a cloud drive like OneDrive.  A folder on a memory stick or a data drive is best.
+Create or locate a suitable folder to store all your local repositories, mine is called *repos* for repositories. Dont use a cloud drive like OneDrive as it can lead to synchronisation issues.
 ## Step 4
 Use GitHub Desktop to clone your remote repository to create a local copy in your repositories folder.
 
