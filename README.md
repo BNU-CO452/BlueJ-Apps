@@ -1,6 +1,6 @@
 # CO452 Application Template 2020
-This template is based on Java application described in the book *Objects First with Java: A Practical Introduction Using BlueJ* Version 6 Java and contains starting Projects for BNU CO452 students  
-
+This template is based on Java application described in the book *Objects First with Java: A Practical Introduction Using BlueJ* Version 6 Java and contains starting Projects for BNU CO452 students and the wiki contains details on the marking scheme and the features required for assessment applications.
+[Goto the Wiki]()
 # What is GitHub
 Please watch this very short video
 [What is GitHub](https://www.youtube.com/watch?v=w3jLJU7DT5E#action=share&ab_channel=GitHub)   
