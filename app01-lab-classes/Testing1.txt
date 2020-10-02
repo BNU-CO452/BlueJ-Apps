@@ -1,0 +1,13 @@
+LabClass co452Lab = new LabClass(3);
+co452Lab.setRoom("G301");
+LabClass labClass1 = new LabClass(3);
+Student student1 = new Student("Gita", "123456");
+Student veena = new Student("Veena", "234567");
+Student gita = new Student("Gita", "12000");
+labClass1.enrollStudent(gita);
+labClass1.printList();
+Lab class unknown
+Instructor: unknown   Room: unknown
+Class list:
+Gita, student ID: 12000, credits: 0
+Number of students: 1
