@@ -10,12 +10,15 @@ import java.util.*;
  */
 public class Student
 {
-    // the student's full name
+    // Attributes
+    
     private String name;
-    // the student ID
+
     private String id;
-    // the amount of credits for study taken so far
+    
+    // A BSc course has 120 credits, each module has 15 Credits
     private int credits;
+
     
     /**
      * Create a new student with a given name and ID number.
