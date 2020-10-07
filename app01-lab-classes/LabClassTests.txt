@@ -5,9 +5,6 @@ Student student2 = new Student("Carol", "234");
 student2.addCredits(20);
 co452Lab.enrollStudent(ann);
 co452Lab.printList();
-Lab class unknown
-Instructor: unknown   Room: unknown
-Class list:
 Anne Surname, student ID: 1234, credits: 0
 Number of students: 1
 co452Lab.setInstructor("Nicholas Day");
