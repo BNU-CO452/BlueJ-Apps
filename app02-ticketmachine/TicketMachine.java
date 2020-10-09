@@ -20,6 +20,10 @@ public class TicketMachine
     // The total amount of money collected by this machine.
     private int total;
 
+    private Ticket issuedTicket;
+    
+    private Ticket aylesburyTicket;
+    
     /**
      * Create a machine that issues tickets of the given price.
      */
@@ -28,6 +32,10 @@ public class TicketMachine
         price = cost;
         balance = 0;
         total = 0;
+        
+        aylesburyTicket = new Ticket("Aylesbury", 220);
+        
+        issuedTicket = null;
     }
 
     /**
@@ -64,6 +72,11 @@ public class TicketMachine
         }
     }
 
+    public void selectAylesburyTicket()
+    {
+        issuedTicket = aylesburyTicket;
+    }
+    
     /**
      * Print a ticket if enough money has been inserted, and
      * reduce the current balance by the ticket price. Print
