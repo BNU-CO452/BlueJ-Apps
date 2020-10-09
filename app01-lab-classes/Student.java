@@ -7,10 +7,11 @@ import java.util.*;
  * @author Michael Kölling and David Barnes
  * @version 2016.02.29
  * 
+ * Modified by Derek
  */
 public class Student
 {
-    // Attributes
+    // Attributes, Fields, Variables
     
     private String name;
 
@@ -19,7 +20,8 @@ public class Student
     // A BSc course has 120 credits, each module has 15 Credits
     private int credits;
 
-      
+    private  Course course;
+    
     /**
      * Create a new student with a given name and ID number.
      */
@@ -81,6 +83,14 @@ public class Student
         return name.substring(0,4) + id.substring(0,3);
     }
     
+    /**
+     * This method will add a course to the student and that
+     * is the course that the student is enrolled on
+     */
+    public void enrolOnCourse(Course course)
+    {
+       this.course = course; 
+    }
     
     /**
      * Print the student's name and ID number to the output terminal.
@@ -88,6 +98,6 @@ public class Student
     public void print()
     {
         System.out.println(name + ", student ID: " + id + ", credits: " + credits);
-
+        course.print();
     }
 }
