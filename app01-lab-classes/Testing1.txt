@@ -1,3 +1,0 @@
-LabClass labClass1 = new LabClass(3);
-
-
