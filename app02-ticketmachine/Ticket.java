@@ -18,10 +18,32 @@ public class Ticket
     private Date timeStamp;
     
     /**
-     * Constructor for objects of class Ticket
+     * Constructor for objects of class Ticket this will
+     * 
      */
-    public Ticket()
+    public Ticket(String destination, int price)
     {
+        timeStamp = new Date();
+        this.destination = destination;
+        this.price = price;
     }
 
+    /**
+     * Return the ticket's destination as a string
+     * NOT NEEDED
+     */
+    public String getDestination()
+    {
+        return destination;
+    }
+    
+    /**
+     * 
+     */
+    public void print()
+    {
+        System.out.print("Ticket to " + destination);
+        System.out.print(" cost " + price + "p ");
+        System.out.println("Issued: " + timeStamp);
+    }
 }
