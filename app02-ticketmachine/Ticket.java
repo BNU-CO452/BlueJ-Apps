@@ -8,36 +8,20 @@ import java.util.Date;
  */
 public class Ticket
 {
-    // Attributes
-    
+    // Journey Destination
     private String destination;
     
+    // this is the ticket price in pence
     private int price;
     
-    private Date issueDateTime;
+    // The date and time the ticket was issues
+    private Date timeStamp;
     
     /**
-     * Constructor for objects of class Ticket setting the
-     * desitnation and price.  The date will contain
-     * the current system date and time
+     * Constructor for objects of class Ticket
      */
-    public Ticket(String destination, int price)
+    public Ticket()
     {
-        this.destination = destination;
-        this.price = price;
-
-        issueDateTime = new Date();
     }
-    
-    /**
-     * 
-     */
-    public void print()
-    {
-        System.out.println("Ticket " + destination + 
-            " Price : " + price + 
-            " Issued " + issueDateTime);
-    }
-    
 
 }
