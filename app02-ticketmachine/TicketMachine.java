@@ -13,32 +13,24 @@
  */
 public class TicketMachine
 {
-    // The price of a ticket from this machine.
-    private int price;
     // The amount of money entered by a customer so far.
     private int balance;
     // The total amount of money collected by this machine.
     private int total;
 
+    private Ticket aylesburyTicket;
     
     /**
      * Create a machine that issues tickets of the given price.
      */
-    public TicketMachine(int price)
+    public TicketMachine()
     {
-        this.price = price;
         balance = 0;
         total = 0;
        
+        aylesburyTicket = new Ticket("Aylesbury", 220);
     }
 
-    /**
-     * @Return The price of a ticket.
-     */
-    public int getPrice()
-    {
-        return price;
-    }
 
     /**
      * Return The amount of money already inserted for the
@@ -66,6 +58,11 @@ public class TicketMachine
         }
     }
     
+    public void insert20p()
+    {
+        balance = balance + 20; 
+    }
+    
     /**
      * Print a ticket if enough money has been inserted, and
      * reduce the current balance by the ticket price. Print
@@ -73,6 +70,8 @@ public class TicketMachine
      */
     public void printTicket()
     {
+        int price = 220;//todo must come from ticket
+        
         if(balance >= price) 
         {
             // Simulate the printing of a ticket.
