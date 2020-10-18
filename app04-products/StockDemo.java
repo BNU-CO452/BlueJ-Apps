@@ -15,12 +15,13 @@ public class StockDemo
      * Create a StockManager and populate it with a few
      * sample products.
      */
-    public StockDemo()
+    public StockDemo(StockManager manager)
     {
-        manager = new StockManager();
-        manager.addProduct(new Product(132, "Clock Radio"));
-        manager.addProduct(new Product(37,  "Mobile Phone"));
-        manager.addProduct(new Product(23,  "Microwave Oven"));
+        this.manager = manager;
+        
+        manager.addProduct(new Product(101, "Samsung Galaxy S20"));
+        manager.addProduct(new Product(102, "Apple iPhone 12"));
+        manager.addProduct(new Product(103, "Google Pixel 4A"));
     }
     
     /**
@@ -28,28 +29,16 @@ public class StockDemo
      * might be used. Details of one product are shown, the
      * product is restocked, and then the details are shown again.
      */
-    public void demo()
+    public void demoDeliverProduct()
     {
-        // Show details of all of the products.
-        manager.printProductDetails();
-        // Take delivery of 5 items of one of the products.
-        manager.delivery(132, 5);
-        manager.printProductDetails();
-    }
-    
-    /**
-     * Show details of the given product. If found,
-     * its name and stock quantity will be shown.
-     * @param id The ID of the product to look for.
-     */
-    public void showDetails(int id)
-    {
-        Product product = getProduct(id);
+        // Show details of all of the products before delivery.
+        manager.printProduct(101);
         
-        if(product != null) 
-        {
-            System.out.println(product.toString());
-        }
+        // Take delivery of 5 items of one of the products.
+        manager.delivery(101, 5);
+        
+        // Show the list of all products after delivery
+        manager.printProduct(101);
     }
     
     /**
@@ -57,15 +46,15 @@ public class StockDemo
      * Show the before and after status of the product.
      * @param id The ID of the product being sold.
      */
-    public void sellProduct(int id)
+    public void demoSellProduct(int id)
     {
         Product product = getProduct(id);
         
         if(product != null) 
         {
-            showDetails(id);
+            manager.printProduct(id);
             product.sellOne();
-            showDetails(id);
+            manager.printProduct(id);
         }
     }
     
@@ -85,13 +74,5 @@ public class StockDemo
                                " is not recognised.");
         }
         return product;
-    }
-
-    /**
-     * @return The stock manager.
-     */
-    public StockManager getManager()
-    {
-        return manager;
     }
 }

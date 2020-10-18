@@ -62,9 +62,36 @@ public class StockManager
     }
 
     /**
-     * Print details of all the products.
+     * Print details of the given product. If found,
+     * its name and stock quantity will be shown.
+     * @param id The ID of the product to look for.
      */
-    public void printProductDetails()
+    public void printProduct(int id)
     {
+        Product product = findProduct(id);
+        
+        if(product != null) 
+        {
+            System.out.println(product.toString());
+        }
+    }
+    
+    /**
+     * Print out each product in the stock
+     * in the order they are in the stock list
+     */
+    public void printAllProducts()
+    {
+        System.out.println();
+        System.out.println("Peacocks Stock List");
+        System.out.println("===================");
+        System.out.println();
+        
+        for(Product product : stock)
+        {
+            System.out.println(product);
+        }
+
+        System.out.println();
     }
 }
