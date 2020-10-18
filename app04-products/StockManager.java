@@ -83,8 +83,8 @@ public class StockManager
     public void printAllProducts()
     {
         System.out.println();
-        System.out.println("Peacocks Stock List");
-        System.out.println("===================");
+        System.out.println("Peacock's Stock List");
+        System.out.println("====================");
         System.out.println();
         
         for(Product product : stock)
