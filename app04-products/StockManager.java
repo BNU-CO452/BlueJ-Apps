@@ -39,15 +39,28 @@ public class StockManager
     {
     }
     
-    /**
-     * Try to find a product in the stock with the given id.
-     * @return The identified product, or null if there is none
-     *         with a matching ID.
-     */
     public Product findProduct(int id)
     {
         return null;
     }
+    
+    /**
+     * Sell one of the given item.
+     * Show the before and after status of the product.
+     * @param id The ID of the product being sold.
+     */
+    public void sellProduct(int id)
+    {
+        Product product = findProduct(id);
+        
+        if(product != null) 
+        {
+            printProduct(id);
+            product.sellOne();
+            printProduct(id);
+        }
+    }    
+
     
     /**
      * Locate a product with the given ID, and return how
