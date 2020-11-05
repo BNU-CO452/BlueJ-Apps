@@ -35,10 +35,13 @@ public class StockManager
      * @param id The ID of the product.
      * @param amount The amount to increase the quantity by.
      */
-    public void delivery(int id, int amount)
+    public void deliverProduct(int id, int amount)
     {
     }
     
+    /**
+     * 
+     */
     public Product findProduct(int id)
     {
         return null;
@@ -55,9 +58,7 @@ public class StockManager
         
         if(product != null) 
         {
-            printProduct(id);
             product.sellOne();
-            printProduct(id);
         }
     }    
 
@@ -95,16 +96,21 @@ public class StockManager
      */
     public void printAllProducts()
     {
-        System.out.println();
-        System.out.println("Peacock's Stock List");
-        System.out.println("====================");
-        System.out.println();
+        printHeading();
         
         for(Product product : stock)
         {
             System.out.println(product);
         }
 
+        System.out.println();
+    }
+    
+    public void printHeading()
+    {
+        System.out.println();
+        System.out.println("Peacock's Stock List");
+        System.out.println("====================");
         System.out.println();
     }
 }

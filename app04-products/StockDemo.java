@@ -12,12 +12,15 @@ public class StockDemo
     private StockManager manager;
 
     /**
-     * Create a StockManager and populate it with a few
-     * sample products.
+     * Create a StockManager and populate it with at least
+     * 10 sample products.
      */
     public StockDemo(StockManager manager)
     {
         this.manager = manager;
+        
+        // Add at least 10 products, they do not have to be mobiles
+        // Make sure the ids are sequential numbers
         
         manager.addProduct(new Product(101, "Samsung Galaxy S20"));
         manager.addProduct(new Product(102, "Apple iPhone 12"));
@@ -25,22 +28,30 @@ public class StockDemo
     }
     
     /**
-     * Provide a very simple demonstration of how a StockManager
-     * might be used. Details of one product are shown, the
-     * product is restocked, and then the details are shown again.
+     * Provide a demonstration of how the StockManager meets all
+     * the user requirements by making a delivery of each product 
+     * re-stocking it by various amounts and then selling each
+     * product by various amounts. Make sure all the requirements
+     * have been demonstrated.
      */
-    public void demoDeliverProduct()
+    public void runDemo()
     {
         // Show details of all of the products before delivery.
-        manager.printProduct(101);
         
-        // Take delivery of 5 items of one of the products.
-        manager.delivery(101, 5);
-        
-        // Show the list of all products after delivery
-        manager.printProduct(101);
+        manager.printAllProducts();
+
+        demoDeliverProducts();
+        manager.printAllProducts();        
+
+        demoSellProducts();
+        manager.printAllProducts();        
     }
     
+    private void demoDeliverProducts()
+    {
+    }
 
-    
+    private void demoSellProducts()
+    {
+    }    
 }
