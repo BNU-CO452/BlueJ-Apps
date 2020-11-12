@@ -25,7 +25,6 @@ public class StockApp
      */
     public void run()
     {
-        printHeading();
         getMenuChoice();
     }
     
