@@ -14,7 +14,7 @@
  * @author  Michael Kölling and David J. Barnes
  * @version 2016.02.29
  * 
- * Modified and extended by Your name
+ * Modified and extended by Student Name
  */
 
 public class Game 
