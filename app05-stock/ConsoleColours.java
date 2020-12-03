@@ -7,6 +7,10 @@
  */
 public class ConsoleColours
 {
+    public static final boolean COLOURS_AVAILABLE = false;
+    
+    public static final char CLEAR_CODE = '\u000c';
+    
     public static final String ANSI_RESET  = "\u001B[0m";
 
     public static final String ANSI_BLACK  = "\u001B[30m";
