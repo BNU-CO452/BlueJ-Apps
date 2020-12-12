@@ -9,7 +9,7 @@
  */
 public class StockApp
 {
-    // Use to get user input
+
     private InputReader reader;
     
     /**
