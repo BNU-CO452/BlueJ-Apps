@@ -7,6 +7,8 @@ import java.util.Scanner;
  * 
  * @author     Michael Kölling and David J. Barnes
  * @version    0.1 (2016.02.29)
+ * 
+ * Modified by Derek Peacock 13/12/2020
  */
 public class InputReader
 {
@@ -38,16 +40,18 @@ public class InputReader
             
             if(!inputLine.isEmpty())
                 isValid = true;
+            else 
+                System.out.println("Your entry is blank!");
         }
 
         return inputLine;
     }
     
     /**
-     * Read a line of text from standard imput (the text terminal),
-     * and return it sas an interger.
+     * Read a the next int from standard imput (the text terminal),
+     * and return it as an interger.
      * 
-     * @return Interger typed by user.
+     * @return Integer typed by user.
      */
     public int getInt(String prompt)
     {
@@ -63,6 +67,8 @@ public class InputReader
             {
                 isValid = true;
             }
+            else 
+                System.out.println("Your value is less than zero!");
         }
 
         return number;
