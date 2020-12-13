@@ -26,10 +26,45 @@ public class InputReader
      *
      * @return  A String typed by the user.
      */
-    public String getString()
+    public String getString(String prompt)
     {
-        System.out.print("> ");         // print prompt
-        String inputLine = reader.nextLine();
+        String inputLine = null;
+        boolean isValid = false;
+        
+        while(!isValid)
+        {
+            System.out.print(prompt);         // print prompt
+            inputLine = reader.nextLine();
+            
+            if(!inputLine.isEmpty())
+                isValid = true;
+        }
+
         return inputLine;
+    }
+    
+    /**
+     * Read a line of text from standard imput (the text terminal),
+     * and return it sas an interger.
+     * 
+     * @return Interger typed by user.
+     */
+    public int getInt(String prompt)
+    {
+        int number = 0;
+        boolean isValid = false;
+        
+        while(!isValid)
+        {
+            System.out.println(prompt);         // print prompt
+            number = reader.nextInt();
+            
+            if(number > 0)
+            {
+                isValid = true;
+            }
+        }
+
+        return number;
     }
 }

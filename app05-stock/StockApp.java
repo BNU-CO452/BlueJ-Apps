@@ -33,7 +33,7 @@ public class StockApp
             printHeading();
             printMenuChoices();
            
-            String choice = reader.getString();
+            String choice = reader.getString("Please enter your choice > ");
             finished = true;
         }
     }
