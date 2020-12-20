@@ -41,7 +41,7 @@ public class InputReader
             if(!inputLine.isEmpty())
                 isValid = true;
             else 
-                System.out.println("Your entry is blank!");
+                System.out.println("\nYour input is blank!\n");
         }
 
         return inputLine;
