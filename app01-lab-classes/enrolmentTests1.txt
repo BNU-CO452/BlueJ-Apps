@@ -8,18 +8,6 @@ Student studentGita = new Student("Gita", "21765422");
 studentDerek.addCredits(15);
 studentVeena.addCredits(15);
 studentGita.addCredits(15);
-Module moduleCO452 = new Module();
-courseG400.print();
---------------------------------------
-  BlueJ Student Enrollments
-      by Derek Peacock
---------------------------------------
-
- Course Code: G400
- Course Title: BSc Computing
- Course Tutor:Nicholas Day
-
- Number of students: 0
 studentDerek.print();
  Student ID: 21345677 Name: Derek
 courseG400.enrollStudent(studentDerek);
