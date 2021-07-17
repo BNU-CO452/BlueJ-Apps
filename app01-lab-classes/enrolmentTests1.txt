@@ -1,0 +1,44 @@
+Course courseG400 = new Course(3);
+courseG400.setCode("G400");
+courseG400.setTitle("BSc Computing");
+courseG400.setTutor("Nicholas Day");
+Student studentDerek = new Student("Derek", "21345677");
+Student studentVeena = new Student("Veena", "21456788");
+Student studentGita = new Student("Gita", "21765422");
+studentDerek.addCredits(15);
+studentVeena.addCredits(15);
+studentGita.addCredits(15);
+Module moduleCO452 = new Module();
+courseG400.print();
+--------------------------------------
+  BlueJ Student Enrollments
+      by Derek Peacock
+--------------------------------------
+
+ Course Code: G400
+ Course Title: BSc Computing
+ Course Tutor:Nicholas Day
+
+ Number of students: 0
+studentDerek.print();
+ Student ID: 21345677 Name: Derek
+courseG400.enrollStudent(studentDerek);
+courseG400.enrollStudent(studentVeena);
+courseG400.enrollStudent(studentGita);
+courseG400.print();
+--------------------------------------
+  BlueJ Student Enrollments
+      by Derek Peacock
+--------------------------------------
+
+ Course Code: G400
+ Course Title: BSc Computing
+ Course Tutor:Nicholas Day
+
+ Student ID: 21345677 Name: Derek
+ Student ID: 21456788 Name: Veena
+ Student ID: 21765422 Name: Gita
+ Number of students: 3
+Student studentBob = new Student("Bob", "21876599");
+courseG400.enrollStudent(studentBob);
+The course is full, you cannot enrol.
