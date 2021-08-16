@@ -1,0 +1,46 @@
+Student student1 = new Student("Bob", "12345678");
+student1.print();
+ Student ID: 12345678 Name: Bob
+Course computing = new Course("G400", "BSc Computing");
+computing.print();
+------------------------------------------
+  App211: BlueJ Student Course Enrollments
+------------------------------------------
+
+ Course Code: G400: BSc Computing
+
+student1.enrol(computing);
+student1.printCourse();
+------------------------------------------
+  App211: BlueJ Student Course Enrollments
+------------------------------------------
+
+ Course Code: G400: BSc Computing
+
+Module co452 = new Module("CO452", "Programming Concepts");
+co452.print();
+
+ CO452: Programming Concepts
+ Module Credits: 0
+
+computing.printModules();
+    Exception occurred.
+computing.setModule(co452);
+computing.printModules();
+
+ CO452: Programming Concepts
+ Module Credits: 0
+
+co452.setCredit(15);
+computing.printModules();
+
+ CO452: Programming Concepts
+ Module Credits: 15
+
+student1.printCourse();
+------------------------------------------
+  App211: BlueJ Student Course Enrollments
+------------------------------------------
+
+ Course Code: G400: BSc Computing
+
