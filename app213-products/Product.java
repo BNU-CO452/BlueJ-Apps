@@ -70,7 +70,7 @@ public class Product
         if(amount > 0) 
         {
             quantity += amount;
-            System.out.println(" Delivered " + amount + " of " + name);
+            System.out.println(" Bought " + amount + " of " + name);
             print();
         }
     }
