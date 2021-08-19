@@ -60,6 +60,14 @@ public class Product
     }
 
     /**
+     * A method to buy a single quantity of the product
+     */
+    public void buy()
+    {
+        buy(1);
+    }
+    
+    /**
      * Restock with the given amount of this product.
      * The current quantity is incremented by the given amount.
      * @param amount The number of new items added to the stock.
