@@ -110,7 +110,8 @@ public class Student
     public void printTranscript()
     {
         System.out.println(" ------------------------------------");
-        System.out.println(" App212: Exam Board Transcript 2022");
+        System.out.println(" App21-02: Exam Board Transcript 2021");
+        System.out.println("        by student name");
         System.out.println(" ------------------------------------");
         
         printCourse();
