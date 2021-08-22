@@ -56,6 +56,17 @@ public class Product
         this.quantity = quantity;
     }
     
+    public void increaseQuantity(int amount)
+    {
+        quantity = quantity + amount;
+    }
+    
+    public void decreaseQuantity(int amount)
+    {
+        if(quantity >= amount)
+            quantity = quantity - amount;
+    }
+    
     /**
      * @return The id, name and quantity in stock.
      */

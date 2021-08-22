@@ -69,11 +69,9 @@ public class StockList
         
         if(product != null) 
         {
-            int quantity = product.getQuantity();
-            if(quantity > 0)
+            if(product.getQuantity() > 0)
             {
-                quantity--;
-                product.setQuantity(quantity);
+                product.decreaseQuantity(1);
                 
                 // printout message
             }
