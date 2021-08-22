@@ -30,12 +30,21 @@ public class StockList
     }
     
     /**
+     * A method to buy a single quantity of the product
+     */
+    public void buyProduct(int productID)
+    {
+        buyProduct(productID, 1);
+    }
+    
+    
+    /**
      * Buy a quantity of a particular product.
      * Increase the quantity of the product by the given amount.
      * @param id The ID of the product.
      * @param amount The amount to increase the quantity by.
      */
-    public void buyProduct(int id, int amount)
+    public void buyProduct(int productID, int amount)
     {
     }
     
@@ -43,23 +52,39 @@ public class StockList
      * Find a product to match the product id,
      * if not found return null
      */
-    public Product findProduct(int id)
+    public Product findProduct(int productID)
     {
         return null;
     }
     
+    
     /**
-     * Sell one of the given item.
+     * Sell one of the given product.
      * Show the before and after status of the product.
      * @param id The ID of the product being sold.
      */
-    public void sellProduct(int id)
+    public void sellProduct(int productID)
     {
-        Product product = findProduct(id);
+        Product product = findProduct(productID);
         
         if(product != null) 
         {
-            product.sell(1);
+            int quantity = product.getQuantity();
+            if(quantity > 0)
+            {
+                quantity--;
+                product.setQuantity(quantity);
+                
+                // printout message
+            }
+            else
+            {
+                // printout message
+            }
+        }
+        else
+        {
+            // printout message
         }
     }    
 
@@ -71,7 +96,7 @@ public class StockList
      * @param id The ID of the product.
      * @return The quantity of the given product in stock.
      */
-    public int numberInStock(int id)
+    public int numberInStock(int productID)
     {
         return 0;
     }
@@ -81,9 +106,9 @@ public class StockList
      * its name and stock quantity will be shown.
      * @param id The ID of the product to look for.
      */
-    public void printProduct(int id)
+    public void printProduct(int productID)
     {
-        Product product = findProduct(id);
+        Product product = findProduct(productID);
         
         if(product != null) 
         {
@@ -110,8 +135,8 @@ public class StockList
     public void printHeading()
     {
         System.out.println();
-        System.out.println(" Peacock's Product Stock List");
-        System.out.println(" ============================");
+        System.out.println(" Peacock's Stock List");
+        System.out.println(" ====================");
         System.out.println();
     }
 }

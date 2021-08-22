@@ -51,6 +51,11 @@ public class Product
         return quantity;
     }
 
+    public void setQuantity(int quantity)
+    {
+        this.quantity = quantity;
+    }
+    
     /**
      * @return The id, name and quantity in stock.
      */
@@ -59,56 +64,6 @@ public class Product
         return " ID " + id + ": " +  name + " stock level: " + quantity;
     }
 
-    /**
-     * A method to buy a single quantity of the product
-     */
-    public void buy()
-    {
-        buy(1);
-    }
-    
-    /**
-     * Restock with the given amount of this product.
-     * The current quantity is incremented by the given amount.
-     * @param amount The number of new items added to the stock.
-     * This must be greater than zero.
-     */
-    public void buy(int amount)
-    {
-        if(amount > 0) 
-        {
-            quantity += amount;
-            System.out.println(" Bought " + amount + " of " + name);
-            print();
-        }        
-    }
-
-    /**
-     * A method to sell a single quantity of the product
-     */
-    public void sell()
-    {
-        sell(1);
-    }
-    
-    /**
-     * Sell one of these products.
-     * An error is reported if there appears to be no stock.
-     */
-    public void sell(int amount)
-    {
-        if(quantity >= amount) 
-        {
-            quantity = quantity - amount;
-            System.out.println(" Sold " + amount + " of " + name);
-            print();
-        }
-        else 
-        {
-            System.out.println(" Attempt to sell " + amount + " " + name);
-            System.out.println(" when only " + quantity + " in stock");
-        }
-    }
     
     public void print()
     {
