@@ -7,7 +7,7 @@ import java.util.ArrayList;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class ProductList
+public class StockList
 {
     // A list of the products.
     private ArrayList<Product> stock;
@@ -15,7 +15,7 @@ public class ProductList
     /**
      * Initialise the stock manager.
      */
-    public ProductList()
+    public StockList()
     {
         stock = new ArrayList<>();
     }

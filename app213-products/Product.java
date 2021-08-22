@@ -80,9 +80,17 @@ public class Product
             quantity += amount;
             System.out.println(" Bought " + amount + " of " + name);
             print();
-        }
+        }        
     }
 
+    /**
+     * A method to sell a single quantity of the product
+     */
+    public void sell()
+    {
+        sell(1);
+    }
+    
     /**
      * Sell one of these products.
      * An error is reported if there appears to be no stock.

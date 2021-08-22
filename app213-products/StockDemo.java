@@ -10,13 +10,13 @@
 public class StockDemo
 {
     // The stock manager.
-    private ProductList stock;
+    private StockList stock;
 
     /**
      * Create a StockManager and populate it with at least
      * 10 sample products.
      */
-    public StockDemo(ProductList stock)
+    public StockDemo(StockList stock)
     {
         this.stock = stock;
         
