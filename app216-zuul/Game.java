@@ -20,7 +20,8 @@
 public class Game 
 {
     private Map map;
-    private Parser parser;
+    private CommandReader reader;
+    private boolean gameOver;
         
     /**
      * Create the game and initialise its internal map.
@@ -28,26 +29,28 @@ public class Game
     public Game() 
     {
         map = new Map();
-        parser = new Parser();
+        reader = new CommandReader(this);
     }
 
-
+    public Map getMap()
+    {
+        return map;
+    }
+    
     /**
      *  Main play routine.  Loops until end of play.
      */
     public void play() 
     {            
         printWelcome();
+        gameOver = false;
 
-        // Enter the main command loop.  Here we repeatedly read commands and
-        // execute them until the game is over.
+        // Enter the main command loop.  Here we repeatedly 
+        // read commands and execute them until the game is over.
                 
-        boolean finished = false;
-        
-        while (! finished) 
+        while (! gameOver) 
         {
-            Command command = parser.getCommand();
-            finished = processCommand(command);
+            gameOver = reader.getCommand();
         }
         
         System.out.println("Thank you for playing.  Good bye.");
@@ -59,103 +62,10 @@ public class Game
     private void printWelcome()
     {
         System.out.println();
-        System.out.println("Welcome to the World of Zuul!");
-        System.out.println("World of Zuul is a new, incredibly boring adventure game.");
-        System.out.println("Type '" + CommandWord.HELP + "' if you need help.");
+        System.out.println(" Welcome to the World of Zuul!");
+        System.out.println(" World of Zuul is a new, incredibly boring adventure game.");
+        System.out.println(" Type 'help' if you need help.");
         System.out.println();
         System.out.println(map.getCurrentRoom().getLongDescription());
-    }
-
-    /**
-     * Given a command, process (that is: execute) the command.
-     * @param command The command to be processed.
-     * @return true If the command ends the game, false otherwise.
-     */
-    private boolean processCommand(Command command) 
-    {
-        boolean wantToQuit = false;
-
-        CommandWord commandWord = command.getCommandWord();
-
-        switch (commandWord) 
-        {
-            case UNKNOWN:
-                System.out.println("I don't know what you mean...");
-                break;
-
-            case HELP:
-                printHelp();
-                break;
-
-            case GO:
-                goRoom(command);
-                break;
-
-            case QUIT:
-                wantToQuit = quit(command);
-                break;
-        }
-        return wantToQuit;
-    }
-
-    // implementations of user commands:
-
-    /**
-     * Print out some help information.
-     * Here we print some stupid, cryptic message and a list of the 
-     * command words.
-     */
-    private void printHelp() 
-    {
-        System.out.println("You are lost. You are alone. You wander");
-        System.out.println("around at the university.");
-        System.out.println();
-        System.out.println("Your command words are:");
-        parser.showCommands();
-    }
-
-    /** 
-     * Try to go in one direction. If there is an exit, enter the new
-     * room, otherwise print an error message.
-     */
-    private void goRoom(Command command) 
-    {
-        if(!command.hasSecondWord()) 
-        {
-            // if there is no second word, we don't know where to go...
-            System.out.println("Go where?");
-            return;
-        }
-
-        String direction = command.getSecondWord();
-
-        // Try to leave current room.
-        Room nextRoom = map.getCurrentExit(direction);
-
-        if (nextRoom == null) 
-        {
-            System.out.println("There is no door!");
-        }
-        else 
-        {
-            map.enterRoom(nextRoom);
-            System.out.println(map.getCurrentRoom().getLongDescription());
-        }
-    }
-
-    /** 
-     * "Quit" was entered. Check the rest of the command to see
-     * whether we really quit the game.
-     * @return true, if this command quits the game, false otherwise.
-     */
-    private boolean quit(Command command) 
-    {
-        if(command.hasSecondWord()) {
-            System.out.println("Quit what?");
-            return false;
-        }
-        else {
-            return true;  // signal that we want to quit
-        }
     }
 }

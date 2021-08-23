@@ -17,7 +17,7 @@ public class StockList
      */
     public StockList()
     {
-        stock = new ArrayList<>();
+        stock = new ArrayList<Product>();
     }
 
     /**
