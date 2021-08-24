@@ -45,7 +45,7 @@ public class CommandReader
     {
         commands = new ArrayList<String>();
         
-        commands.add(" " + GO_COMMAND + " <direction> go into another room");
+        commands.add(" " + GO_COMMAND + " <direction> go into another room/location");
         commands.add(" " + HELP_COMMAND + "\t\t list all commands");
         commands.add(" " + QUIT_COMMAND + "\t\t Quit the game!");
         
@@ -59,7 +59,7 @@ public class CommandReader
     {
         String inputLine;  
         
-        System.out.print("> ");
+        System.out.print(" > ");
         inputLine = reader.nextLine().toLowerCase();
 
         // Find up to two words on the line.
