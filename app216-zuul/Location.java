@@ -3,31 +3,31 @@ import java.util.HashMap;
 import java.util.Iterator;
 
 /**
- * Class Room - a room in an adventure game.
+ * Class Location - a location on the map of an adventure game.
  *
  * This class is part of the "World of Zuul" application. 
  * "World of Zuul" is a very simple, text based adventure game.  
  *
- * A "Room" represents one location in the scenery of the game.  It is 
- * connected to other rooms via exits.  For each existing exit, the room 
- * stores a reference to the neighboring room.
+ * A "Location" represents one place in the scenery of the game.  It is 
+ * connected to other locations via exits.  For each existing exit, the 
+ * location stores a reference to the neighboring locations.
  * 
  * @author  Michael Kölling and David J. Barnes
+ * Modified by Derek Peacock & Nicholas Day
  * @version 2016.02.29
  */
 
-public class Room 
+public class Location 
 {
     private String description;
-    private HashMap<String, Room> exits;        // stores exits of this room.
+    private HashMap<String, Location> exits;        // stores exits of this room.
 
     /**
-     * Create a room described "description". Initially, it has
+     * Create a location described "description". Initially, it has
      * no exits. "description" is something like "a kitchen" or
      * "an open court yard".
-     * @param description The room's description.
      */
-    public Room(String description) 
+    public Location(String description) 
     {
         this.description = description;
         exits = new HashMap<>();
@@ -38,7 +38,7 @@ public class Room
      * @param direction The direction of the exit.
      * @param neighbor  The room to which the exit leads.
      */
-    public void setExit(String direction, Room neighbor) 
+    public void setExit(String direction, Location neighbor) 
     {
         exits.put(direction, neighbor);
     }
@@ -64,9 +64,8 @@ public class Room
     }
 
     /**
-     * Return a string describing the room's exits, for example
-     * "Exits: north west".
-     * @return Details of the room's exits.
+     * Return a string describing the locations's exits, 
+     * for example "Exits: north west".
      */
     private String getExitString()
     {
@@ -86,7 +85,7 @@ public class Room
      * @param direction The exit's direction.
      * @return The room in the given direction.
      */
-    public Room getExit(String direction) 
+    public Location getExit(String direction) 
     {
         return exits.get(direction);
     }

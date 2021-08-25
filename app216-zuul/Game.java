@@ -8,8 +8,7 @@
  *  method.
  * 
  *  This main class creates and initialises all the others: it creates all
- *  rooms, creates the parser and starts the game.  It also evaluates and
- *  executes the commands that the parser returns.
+ *  locations, creates the CommandReader and starts the game.  
  * 
  * @author  Michael Kölling and David J. Barnes
  * @version 2016.02.29
@@ -66,6 +65,6 @@ public class Game
         System.out.println(" World of Zuul is a new, incredibly boring adventure game.");
         System.out.println(" Type 'help' if you need help.");
         System.out.println();
-        System.out.println(map.getCurrentRoom().getLongDescription());
+        System.out.println(map.getCurrentLocation().getLongDescription());
     }
 }

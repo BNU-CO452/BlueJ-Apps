@@ -1,13 +1,13 @@
 
 /**
  * This command transfers the player from
- * one room to another room provided the
- * two rooms are linked by a valid exit
+ * one location to another location provided the
+ * two locations are linked by a valid exit
  *
  * @author Derek Peacock & Nicholas Day
  * @version 2021-08-23
  */
-public  class GoCommand extends ZuulCommand
+public class GoCommand extends ZuulCommand
 {
     String direction;
     
@@ -26,20 +26,20 @@ public  class GoCommand extends ZuulCommand
             return;
         }
 
-
         Map map = zuul.getMap();
         
         // Try to leave current room.
-        Room nextRoom = map.getCurrentExit(direction);
+        Location currentLocation = map.getCurrentLocation();
+        Location nextLocation = currentLocation.getExit(direction);
 
-        if (nextRoom == null) 
+        if (nextLocation == null) 
         {
-            System.out.println("There is no door!");
+            System.out.println("There is no exit in this direction!");
         }
         else 
         {
-            map.enterRoom(nextRoom);
-            System.out.println(map.getCurrentRoom().getLongDescription());
+            map.enterLocation(nextLocation);
+            System.out.println(map.getCurrentLocation().getLongDescription());
         }
     }
 }

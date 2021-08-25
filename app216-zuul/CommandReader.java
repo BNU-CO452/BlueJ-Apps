@@ -89,7 +89,8 @@ public class CommandReader
         }
         else if(commandWord.equals("help"))
         {
-            showCommands();
+            HelpCommand help = new HelpCommand(game, commands);
+            help.execute();
         }
         else if(commandWord.equals("quit"))
         {
@@ -97,24 +98,5 @@ public class CommandReader
         }
 
         return false;
-    }
-    
-    /**
-     * Print out some help information.
-     * Here we print some stupid, cryptic message and
-     * a list of the command words.
-     */
-    public void showCommands()
-    {
-        System.out.println(" You are lost. You are alone. You wander");
-        System.out.println(" around at the university.");        
-        System.out.println();
-        System.out.println(" Your command words are:");
-        System.out.println();
-        
-        for(String command : commands)
-        {
-            System.out.println("  " + command);
-        }
     }
 }

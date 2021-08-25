@@ -1,7 +1,7 @@
 
 /**
  * This class is reponsible for creating and
- * linking all the rooms in the game to
+ * linking all the Locations in the game to
  * form a 2D or 3D network
  *
  * @author Derek Peacock and Nicholas Day
@@ -9,59 +9,91 @@
  */
 public class Map
 {
-    private Room currentRoom;
+    private Location outside, theater, pub, lab, office;
+
+    private Location currentLocation;
 
     /**
      * Constructor for objects of class Map
      */
     public Map()
     {
-        createRooms();
+        createLocations();
     }
 
     /**
-     * Create all the rooms and link their exits together.
+     * Create all the Locations and link their exits together.
+     * Set the current location to the outside.
      */
-    private void createRooms()
+    private void createLocations()
     {
-        Room outside, theater, pub, lab, office;
-      
-        // create the rooms
-        outside = new Room("outside the main entrance of the university");
-        theater = new Room("in a lecture theater");
-        pub = new Room("in the campus pub");
-        lab = new Room("in a computing lab");
-        office = new Room("in the computing admin office");
+        createOutside();
+        createTheatre();
+        createPub();
+        createLab();
+        createOffice();
+
+        currentLocation = outside;  // start game outside
+    }
+    
+    /**
+     * Create the outside and link it to the
+     * theatre, lab and pub
+     */
+    private void createOutside()
+    {
+        outside = new Location("outside the main entrance of the university");
         
-        // initialise room exits
         outside.setExit("east", theater);
         outside.setExit("south", lab);
         outside.setExit("west", pub);
-
-        theater.setExit("west", outside);
-
+    }
+    
+    /**
+     * Create the pub and link it to the outside
+     */
+    private void createPub()
+    {
+        pub = new Location("in the campus pub");
         pub.setExit("east", outside);
-
+    }
+    /**
+     * Create the office linked to the lab
+     */
+    private void createOffice()
+    {
+        office = new Location("in the computing admin office");
+        office.setExit("west", lab);
+    }
+    
+    /**
+     * Create the theatre linked to the outside
+     */
+    private void createTheatre()
+    {
+        theater = new Location("in a lecture theater");
+        theater.setExit("west", outside);
+    }
+    
+    /**
+     * Create the lab and link it to the outside and office
+     */
+    private void createLab()
+    {
+        // create the Locations
+        lab = new Location("in a computing lab");
+        
         lab.setExit("north", outside);
         lab.setExit("east", office);
-
-        office.setExit("west", lab);
-
-        currentRoom = outside;  // start game outside
     }
     
-    public Room getCurrentRoom()
+    public Location getCurrentLocation()
     {
-        return currentRoom;
+        return currentLocation;
     }
     
-    public Room getCurrentExit(String direction)
+    public void enterLocation(Location nextLocation)
     {
-        return currentRoom.getExit(direction);
-    }
-
-    public void enterRoom(Room nextRoom)
-    {
-        currentRoom = nextRoom;
+        currentLocation = nextLocation;
     }
 }
