@@ -4,6 +4,10 @@
  * linking all the Locations in the game to
  * form a 2D or 3D network
  *
+ *  [Pub]<---->[Outside]<---->[Theatre]
+ *                 |
+ *          [Computer Lab]<---->[Office]
+ *             
  * @author Derek Peacock and Nicholas Day
  * @version 2021-08-22
  */
@@ -24,6 +28,8 @@ public class Map
     /**
      * Create all the Locations and link their exits together.
      * Set the current location to the outside.
+     * Both locations need to have been created before
+     * their exists are linked.
      */
     private void createLocations()
     {
