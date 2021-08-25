@@ -30,8 +30,8 @@ public class Map
         createOutside();
         createTheatre();
         createPub();
-        createLab();
         createOffice();
+        createLab();
 
         currentLocation = outside;  // start game outside
     }
@@ -44,9 +44,6 @@ public class Map
     {
         outside = new Location("outside the main entrance of the university");
         
-        outside.setExit("east", theater);
-        outside.setExit("south", lab);
-        outside.setExit("west", pub);
     }
     
     /**
@@ -55,15 +52,9 @@ public class Map
     private void createPub()
     {
         pub = new Location("in the campus pub");
+        
         pub.setExit("east", outside);
-    }
-    /**
-     * Create the office linked to the lab
-     */
-    private void createOffice()
-    {
-        office = new Location("in the computing admin office");
-        office.setExit("west", lab);
+        outside.setExit("west", pub);
     }
     
     /**
@@ -72,7 +63,18 @@ public class Map
     private void createTheatre()
     {
         theater = new Location("in a lecture theater");
+        
         theater.setExit("west", outside);
+        outside.setExit("east", theater);
+    }
+    
+    /**
+     * Create the office linked to the lab
+     */
+    private void createOffice()
+    {
+        office = new Location("in the computing admin office");
+        
     }
     
     /**
@@ -83,8 +85,11 @@ public class Map
         // create the Locations
         lab = new Location("in a computing lab");
         
-        lab.setExit("north", outside);
         lab.setExit("east", office);
+        office.setExit("west", lab);
+        
+        lab.setExit("north", outside);
+        outside.setExit("south", lab);
     }
     
     public Location getCurrentLocation()

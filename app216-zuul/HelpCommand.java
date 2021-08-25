@@ -33,5 +33,8 @@ public class HelpCommand extends ZuulCommand
         {
             System.out.println("  " + command);
         }
+
+        System.out.println();
+        System.out.println(zuul.map.getCurrentLocation().getLongDescription());
     }
 }

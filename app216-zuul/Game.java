@@ -18,7 +18,7 @@
 
 public class Game 
 {
-    private Map map;
+    public final Map map;
     private CommandReader reader;
     private boolean gameOver;
         
@@ -31,11 +31,6 @@ public class Game
         reader = new CommandReader(this);
     }
 
-    public Map getMap()
-    {
-        return map;
-    }
-    
     /**
      *  Main play routine.  Loops until end of play.
      */

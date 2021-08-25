@@ -27,7 +27,7 @@ public class TakeCommand extends ZuulCommand
             return;
         }
 
-        Map map = zuul.getMap();
+        Map map = zuul.map;
         // remove the item from the current room
         // and add it to the player's inventory
         // Print out a suitable message.

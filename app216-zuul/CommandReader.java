@@ -19,6 +19,7 @@ import java.util.ArrayList;
 public class CommandReader 
 {
     public static final String GO_COMMAND = "go";
+    public static final String TAKE_COMMAND = "take";
     public static final String QUIT_COMMAND = "quit";
     public static final String HELP_COMMAND = "help";
     
@@ -45,10 +46,10 @@ public class CommandReader
     {
         commands = new ArrayList<String>();
         
-        commands.add(" " + GO_COMMAND + " <direction> go into another room/location");
-        commands.add(" " + HELP_COMMAND + "\t\t list all commands");
-        commands.add(" " + QUIT_COMMAND + "\t\t Quit the game!");
-        
+        commands.add(" " + GO_COMMAND + " <direction> : Exit location in that direction");
+        commands.add(" " + TAKE_COMMAND + " <item>\t  : Add to player's inventory");
+        commands.add(" " + HELP_COMMAND + "\t\t  : List all commands");
+        commands.add(" " + QUIT_COMMAND + "\t\t  : Quit the game!");
     }
     
 
@@ -87,6 +88,11 @@ public class CommandReader
             GoCommand go = new GoCommand(game, word2);
             go.execute();
         }
+        else if(commandWord.equals("take"))
+        {
+            TakeCommand take = new TakeCommand(game, word2);
+            take.execute();
+        }        
         else if(commandWord.equals("help"))
         {
             HelpCommand help = new HelpCommand(game, commands);

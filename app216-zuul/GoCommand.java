@@ -26,7 +26,7 @@ public class GoCommand extends ZuulCommand
             return;
         }
 
-        Map map = zuul.getMap();
+        Map map = zuul.map;
         
         // Try to leave current room.
         Location currentLocation = map.getCurrentLocation();
