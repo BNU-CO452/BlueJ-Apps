@@ -18,7 +18,7 @@
 
 public class Game 
 {
-    public final Map map;
+    public final Map MAP;
     private CommandReader reader;
     private boolean gameOver;
         
@@ -27,7 +27,7 @@ public class Game
      */
     public Game() 
     {
-        map = new Map();
+        MAP = new Map();
         reader = new CommandReader(this);
     }
 
@@ -60,6 +60,6 @@ public class Game
         System.out.println(" World of Zuul is a new, incredibly boring adventure game.");
         System.out.println(" Type 'help' if you need help.");
         System.out.println();
-        System.out.println(map.getCurrentLocation().getLongDescription());
+        System.out.println(MAP.getCurrentLocation().getLongDescription());
     }
 }
