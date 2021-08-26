@@ -62,22 +62,22 @@ public class CommandReader
 
     private boolean executeCommand()
     {
-        if(commandWord.equals(Commands.GO.word))
+        if(commandWord.equals(CommandWords.GO.word))
         {
             GoCommand go = new GoCommand(game, word2);
             go.execute();
         }
-        else if(commandWord.equals(Commands.TAKE.word))
+        else if(commandWord.equals(CommandWords.TAKE.word))
         {
             TakeCommand take = new TakeCommand(game, word2);
             take.execute();
         }        
-        else if(commandWord.equals(Commands.HELP.word))
+        else if(commandWord.equals(CommandWords.HELP.word))
         {
             HelpCommand help = new HelpCommand(game);
             help.execute();
         }
-        else if(commandWord.equals(Commands.QUIT.word))
+        else if(commandWord.equals(CommandWords.QUIT.word))
         {
             return true;
         }

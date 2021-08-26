@@ -25,7 +25,7 @@ public class HelpCommand extends ZuulCommand
         System.out.println(" Your command words are:");
         System.out.println();
         
-        for(Commands command : Commands.values())
+        for(CommandWords command : CommandWords.values())
         {
             System.out.println(" " + command.word + 
                                "\t  : " + command.description);                        

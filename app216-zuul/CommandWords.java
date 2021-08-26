@@ -6,7 +6,7 @@
  * @author Derek Peacock & Nicholas Day
  * @version 25-08-2021
  */
-public enum Commands
+public enum CommandWords
 {
     GO   ("go","Exit location in <direction>"),
     TAKE ("take", "Take <item> from location"),
@@ -16,7 +16,7 @@ public enum Commands
     public final String word;
     public final String description;
     
-    Commands(String word, String description)
+    CommandWords(String word, String description)
     {
         this.word = word;
         this.description = description;
