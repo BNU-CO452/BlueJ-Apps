@@ -7,15 +7,11 @@ import java.util.ArrayList;
  */
 public class HelpCommand extends ZuulCommand
 {
-    private ArrayList<String> commands;
-
-    public HelpCommand(Game zuul, ArrayList<String> commands)
+    public HelpCommand(Game zuul)
     {
         super(zuul);
-        this.commands = commands;
     }
 
-    
     /**
      * Print out some help information.
      * Here we print some stupid, cryptic message and
@@ -29,11 +25,13 @@ public class HelpCommand extends ZuulCommand
         System.out.println(" Your command words are:");
         System.out.println();
         
-        for(String command : commands)
+        for(Commands command : Commands.values())
         {
-            System.out.println("  " + command);
-        }
-
+            System.out.println(" " + command.word + 
+                               "\t  : " + command.description);                        
+        }   
+        System.out.println();
+        System.out.println(" e.g. go west, take gold");
         System.out.println();
         System.out.println(zuul.MAP.getCurrentLocation().getLongDescription());
     }
