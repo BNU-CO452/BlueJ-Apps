@@ -12,6 +12,10 @@ public class TakeCommand extends ZuulCommand
 {
     String item;
     
+    /**
+     * Take an item from a location and add it
+     * to the player's inventory.
+     */
     public TakeCommand(Game zuul, String item)
     {
         super(zuul);
