@@ -10,6 +10,7 @@
 public class StockApp
 {
     private InputReader reader;
+    
     //private ProductList stock;
     
     /**
@@ -18,6 +19,7 @@ public class StockApp
     public StockApp()
     {
         reader = new InputReader();
+        
         //stock = new ProductList();
         //StockDemo demo = new StockDemo(stock);
     }
@@ -49,7 +51,7 @@ public class StockApp
         }
         else if(choice.equals("print"))
         {
-            //stock.printAllProducts();
+            //stock.print();
         }
         
         return false;
