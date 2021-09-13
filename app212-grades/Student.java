@@ -12,7 +12,7 @@ public class Student
     // the student's full name
     private String name;
     // the student ID
-    private String studentID;
+    private int id;
     
     private Course course;
     
@@ -24,16 +24,16 @@ public class Student
      */
     public Student()
     {
-        this("Derek", "12345678");
+        this("Derek", 12345678);
     }
     
     /**
      * Create a new student with a given name and ID number.
      */
-    public Student(String name, String studentID)
+    public Student(String name, int id)
     {
         this.name = name;
-        this.studentID = studentID;
+        this.id = id;
         
         marks = new ArrayList<ModuleMark>();
     }
@@ -81,9 +81,9 @@ public class Student
     /**
      * Return the student ID of this student.
      */
-    public String getStudentID()
+    public int getID()
     {
-        return studentID;
+        return id;
     }
 
         
@@ -93,7 +93,7 @@ public class Student
      */
     public void print()
     {
-        System.out.println(" Student ID: " + studentID + ", " + name);
+        System.out.println(" Student ID: " + id + ", " + name);
     }
     
     public void printCourse()
