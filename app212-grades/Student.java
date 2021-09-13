@@ -9,13 +9,13 @@ import java.util.*;
  */
 public class Student
 {
-    // the student's full name
-    private String name;
     // the student ID
     private int id;
-    
+    // the student's full name
+    private String name;
+    // The course the student is enrolled on
     private Course course;
-    
+    // The marks awarded for the modules on the course
     private ArrayList<ModuleMark> marks;
     
     /**
