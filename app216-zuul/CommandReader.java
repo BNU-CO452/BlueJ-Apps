@@ -9,7 +9,7 @@ import java.util.ArrayList;
  * tries to interpret the line as a two-word command. It returns the command
  * as an object of class Command.
  *
- * The parser has a set of known command words. It checks user input against
+ * The reader has a set of known command words. It checks user input against
  * the known commands, and if the input is not one of the known commands, it
  * returns a command object that is marked as an unknown command.
  * 
@@ -79,9 +79,10 @@ public class CommandReader
         }
         else if(commandWord.equals(CommandWords.QUIT.word))
         {
-            return true;
+            return true;  // game over
         }
 
+        // Return false means the game is not over
         return false;
     }
 }

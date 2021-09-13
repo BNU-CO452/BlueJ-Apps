@@ -13,6 +13,8 @@
  */
 public class Map
 {
+    // Need to add a list of exits
+    
     private Location outside, theater, pub, lab, office;
 
     private Location currentLocation;

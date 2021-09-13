@@ -10,7 +10,7 @@
 public class Student
 {
     // A unique 8 digit BNU identifier
-    private String id;
+    private int id;
     // the student's full name
     private String name;
     // The course the student is enrolled on
@@ -19,7 +19,7 @@ public class Student
     /**
      * Create a new student with a given name and ID number.
      */
-    public Student(String name, String id)
+    public Student(String name, int id)
     {
         this.name = name;
         this.id = id;
@@ -36,7 +36,7 @@ public class Student
      /**
      * Return the student ID of this student.
      */
-    public String getID()
+    public int getID()
     {
         return id;
     }
