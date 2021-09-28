@@ -5,11 +5,13 @@ This template is based on Java application described in the book *Objects First 
 Please watch this very short video
 [What is GitHub](https://www.youtube.com/watch?v=w3jLJU7DT5E#action=share&ab_channel=GitHub)   
 # GitHub Desktop
-The requirements for those applications and full details of how they will be assessed can be found in [this repositories Wiki](https://github.com/BNU-CO452/BlueJ-Apps/wiki)
+The requirements for those applications and full details of how they will be assessed can be found in 
+
+[this repositories Wiki](https://github.com/BNU-CO452/BlueJ-Apps/wiki)
 ## Step 1
 Click on the **Use this Template** button and create your own copy of this repository
 ## Step 2
-Install [GitHub Desktop](https://desktop.github.com/) on your computer  
+Install [GitHub Desktop](https://desktop.github.com/) on your computer    
 
 ![GitHub Desktop](https://github.com/BNU-CO452/BlueJ-Apps/blob/master/images/GitHub%20Desktop-1.jpg)
 ## Step 3
