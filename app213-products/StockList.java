@@ -46,6 +46,7 @@ public class StockList
      */
     public void buyProduct(int productID, int amount)
     {
+        
     }
     
     /**
